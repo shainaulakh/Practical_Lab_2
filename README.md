@@ -87,6 +87,20 @@ For this separate experiment, the training-set median progression score of 141 w
 
 These categories are not medically validated risk groups. The intended assignment requirement is awaiting professor clarification.
 
+## Object-Oriented Programming (OOP)
+
+The ML experiments use five custom Python classes stored outside the notebook in `models/`:
+
+- `models/univariate_polynomial.py` — BMI Polynomial (degrees 0–5)
+- `models/multivariate_polynomial.py` — 10-feature Polynomial (degrees 2 and 3)
+- `models/decision_tree.py` — Decision Trees (depths 3 and 8)
+- `models/knn.py` — kNN (k=3 and k=15)
+- `models/logistic_classification.py` — Logistic Classification (C=0.1 and C=1.0)
+
+Each class has `__init__()`, `fit()` and `predict()` methods. The notebook creates and evaluates 14 class objects in total. Classification results remain separate from regression results.
+
+Run the notebook with your VS Code project folder as the working directory so `models` imports correctly.
+
 ## Evaluation Metrics
 
 For regression:
