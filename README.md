@@ -85,7 +85,7 @@ Two binary classification models:
 
 For this separate experiment, the training-set median progression score of 141 was used to define two statistical categories.
 
-These categories are not medically validated risk groups. The intended assignment requirement is awaiting professor clarification.
+These categories are not medically validated risk groups. My professor confirmed that converting the continuous progression target into categories is acceptable feature engineering before Logistic Regression.
 
 ## Object-Oriented Programming (OOP)
 
@@ -143,6 +143,25 @@ Its final test results were:
 - Test MAPE: 48.386%
 
 These results indicate that BMI alone has limited predictive ability for individual disease progression scores.
+
+## Final Part 3 Test Results
+
+Hyperparameters were selected using the validation set, before looking at the held-out test set.
+The final test evaluation uses the already-trained external OOP class objects.
+
+| Selected Part 3 regression model | Test R² | Test MAE | Test MAPE |
+| --- | ---: | ---: | ---: |
+| Multivariate Polynomial Degree 2 | 0.419 | 43.794 | 38.181% |
+| Decision Tree Depth 3 | 0.393 | 46.019 | 42.247% |
+| kNN (k=15) | 0.439 | 45.236 | 39.753% |
+
+The validation-selected Logistic Regression classifier (C=0.1) achieved a held-out
+**test accuracy of 0.742** and **test F1-score of 0.721**. Its target was converted to
+binary labels using the training-set median, as permitted by the professor.
+Classification scores cannot be directly compared with regression R², MAE, or MAPE.
+
+The notebook also includes example held-out test predictions and explanations of
+polynomial features, tree leaves, kNN neighbors, and logistic regularization.
 
 ## Cross-Validation
 
