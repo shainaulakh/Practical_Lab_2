@@ -188,9 +188,9 @@ Python 3.11 with:
 - scikit-learn
 - ipykernel
 
-Exact package versions will be recorded in `requirements.txt`.
+Exact dependency versions are recorded in `requirements.txt` to support reproducibility.
 
-A fresh-environment reproducibility check will be completed before submission.
+I tested the notebook in a fresh Python 3.11 Conda environment by installing the dependencies from `requirements.txt` and running all notebook cells successfully.
 
 ## References
 
